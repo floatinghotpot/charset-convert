@@ -1,17 +1,20 @@
 {
-  "name": "ipa-deploy",
-  "version": "0.2.0",
-  "description": "Run ios-deploy to install an IPA package to iOS device",
+  "name": "charset-convert",
+  "version": "1.0.0",
+  "description": "Command line tool to convert text file from one charset to another",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/floatinghotpot/ipa-deploy.git"
+    "url": "git://github.com/floatinghotpot/charset-convert.git"
   },
   "keywords": [
     "ios",
-    "ios-deploy",
-    "ipa-deploy",
+    "charset",
+    "iconv",
+    "iconv-lite",
+    "gbk",
+    "gb2312",
     "rjfun"
   ],
   "author": "Raymond Xie <rjfun.mobile@gmail.com> (http://floatinghotpot.github.io/)",
@@ -23,17 +26,16 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/floatinghotpot/ipa-deploy/issues"
+    "url": "https://github.com/floatinghotpot/charset-convert/issues"
   },
   "dependencies": {
-    "glob": "^5.0.10",
-    "minimist": "^1.1.0",
-    "shelljs": "^0.5.0"
+    "iconv-lite": "^0.4.13",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {},
   "analyze": false,
   "preferGlobal": "true",
   "bin": {
-    "ipa-deploy": "index.js"
+    "charset-convert": "index.js"
   }
 }

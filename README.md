@@ -1,47 +1,32 @@
-# ipa-deploy #
+# charset-convert #
 
-Deploy .ipa package to iOS device
+Command line utility to convert text file from one charset to another.
 
 # Dependency
 
-* Mac OS
-* ios-deploy, use it to install .app to iOS device, install it: ```[sudo] npm install -g ios-deploy```
-* unzip, use it to unzip .ipa file.
+* node.js, npm
+* iconv-lite (auto installed as dependency)
 
 # Install
 
 ```bash
-[sudo] npm install -g ipa-deploy
+[sudo] npm install -g charset-convert
 ```
 
 # How To Use #
 
 ```bash
-ipa-deploy <path_to_ipa_file>
+charset-convert <in file> <out file> -i <in encoding> -o <out encoding>
 ```
 
 Example:
 ```bash
-ipa-deploy myapp.ipa
+charset-convert demo-gbk.txt demo-utf8.txt -i gbk -o utf8
 ```
 
 # How It Works #
 
-Here are the steps that the tool actualy runs:
-
-```bash
-# unzip the IPA file to tmp folder
-mkdir ./tmp
-cd ./tmp
-unzip <path_to_ipa_file>
-
-# run ios-deploy to install the app into iOS device
-ios-deploy -b ./Payload/*.app
-
-# clean up the tmp folder
-cd ..
-rm -r ./tmp
-```
+This CLI utility is implemented based on [iconv-lite](https://github.com/ashtuchkin/iconv-lite), a great charset decoding/encoding module for node.js
 
 # Credits #
 
