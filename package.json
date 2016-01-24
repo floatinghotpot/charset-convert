@@ -1,6 +1,6 @@
 {
   "name": "charset-convert",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Command line tool to convert text file from one charset to another",
   "main": "index.js",
   "scripts": {},
@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "iconv-lite": "^0.4.13",
-    "minimist": "^1.1.0"
+    "minimist": "^1.1.0",
+    "walk": "^2.3.9"
   },
   "devDependencies": {},
   "analyze": false,
